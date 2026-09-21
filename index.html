@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quick Quiz</title>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    <h1>Test</h1>
+
+    
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength</title>
+    <style>
+        body { font-family:Arial; text-align: center; margin-top:100px;} 
+        input { padding: 12px; font-weight:bold;}
+    </style>
+</head>
+<body>
+    <h2>Password Strength</h2>
+    <input type="password" id="password"
+    placeholder="Enter password"
+    oninput="checkpassword()">
+
+    <div id="result"></div>
+
+    <script>
+        function checkPassword() {
+            let p = document.getElementaryId("password").value;
+            let result = document.getElementById("result");
+
+            if (p.length < 6) 
+                result.innerHTML = "weak";
+                else if (/[A-Z]/.test(p) && /[0-9]/.test(p) && /[^A-Za-Z0-9]/.test(p))
+                result.innerHTML = "strong";
+                else
+                result.innerHTML = "medium";
+            
+
+            }
+    </script>
+</body>
+</html>
